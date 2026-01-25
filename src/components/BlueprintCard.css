@@ -1,0 +1,218 @@
+.blueprint-card {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.blueprint-card:hover {
+  border-color: #58a6ff;
+  box-shadow: 0 4px 12px rgba(88, 166, 255, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: 160px;
+  background-color: #161b22;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #30363d;
+}
+
+.card-image img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.card-header {
+  padding: 1rem 0.75rem;
+}
+
+.card-header h3 {
+  margin: 0 0 0.2rem 0;
+  font-size: 1.05rem;
+  color: #79c0ff;
+}
+
+.weapon-type {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #8b949e;
+}
+
+.card-details {
+  padding: 0.75rem;
+  background-color: #161b22;
+  border-top: 1px solid #30363d;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 140px;
+  overflow-y: auto;
+}
+
+.attachments-list {
+  margin-bottom: 0.75rem;
+}
+
+.attachments-list h4 {
+  margin: 0 0 0.5rem 0;
+  color: #79c0ff;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.attachments-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.attachments-list li {
+  padding: 0.3rem 0;
+  color: #c9d1d9;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #30363d;
+}
+
+.attachments-list li:last-child {
+  border-bottom: none;
+}
+
+.no-attachments {
+  color: #6e7681;
+  font-style: italic;
+  justify-content: flex-start !important;
+}
+
+.attachment-label {
+  font-weight: 600;
+  color: #8b949e;
+}
+
+.attachment-value {
+  color: #79c0ff;
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  text-align: right;
+}
+
+.card-code {
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+  background-color: #0d1117;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+}
+
+.card-code h4 {
+  margin: 0 0 0.5rem 0;
+  color: #79c0ff;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.code-display {
+  background-color: #010409;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #30363d;
+}
+
+.code-display code {
+  color: #79c0ff;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  word-break: break-all;
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.copy-code-btn,
+.close-details-btn {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-size: 0.8rem;
+}
+
+.copy-code-btn {
+  background-color: #238636;
+  color: white;
+}
+
+.copy-code-btn:hover {
+  background-color: #2ea043;
+  box-shadow: 0 2px 6px rgba(35, 134, 54, 0.4);
+}
+
+.close-details-btn {
+  background-color: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+}
+
+.close-details-btn:hover {
+  background-color: #30363d;
+  border-color: #58a6ff;
+}
+
+.card-details::-webkit-scrollbar {
+  width: 4px;
+}
+
+.card-details::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+.card-details::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 2px;
+}
+
+.card-details::-webkit-scrollbar-thumb:hover {
+  background: #58a6ff;
+}
+
+@media (max-width: 768px) {
+  .card-header {
+    padding: 0.5rem;
+  }
+
+  .card-details {
+    padding: 0.5rem;
+    max-height: none;
+  }
+
+  .attachments-list li {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+}

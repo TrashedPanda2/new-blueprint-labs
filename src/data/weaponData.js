@@ -1,0 +1,180 @@
+export const weaponCategories = {
+  "ASSAULT RIFLES": {
+    "A01": "M15 MOD 0",
+    "A02": "AK-27",
+    "A03": "MXR-17",
+    "A04": "X9 Maverick",
+    "A05": "DS20 Mirage",
+    "A06": "Peacekeeper MK1",
+    "A11": "Maddox RFB"
+  },
+  "SUBMACHINE GUNS": {
+    "S01": "Ryden 45K",
+    "S02": "RK-9",
+    "S03": "Razor 9mm",
+    "S04": "Dravec 45",
+    "S05": "Carbon 57",
+    "S06": "MPC-25",
+    "S07": "Sturmwolf 45",
+    "S10": "Kogot-7"
+  },
+  "SHOTGUNS": {
+    "C01": "M10 Breacher",
+    "C02": "Echo 12",
+    "C03": "Akita"
+  },
+  "LIGHT MACHINE GUNS": {
+    "L01": "MK.78",
+    "L02": "XM325",
+    "L04": "Sokol 545"
+  },
+  "MARKSMAN RIFLES": {
+    "M01": "M8A1",
+    "M02": "Warden 308",
+    "M03": "M34 Novaline"
+  },
+  "SNIPER RIFLES": {
+    "R01": "VS Recon",
+    "R02": "Shadow SK",
+    "R03": "XR-3 Ion",
+    "R05": "Hawker HX"
+  },
+  "PISTOLS": {
+    "P01": "Jäger 45",
+    "P02": "Velox 5.7",
+    "P03": "Coda 9"
+  },
+  "SPECIALS": {
+    "U01": "NX Ravager"
+  }
+};
+
+export const attachmentCategories = {
+  optic: {
+    "5XGZH-JLU91-1": "LTI MINI",
+    "8E7Z8-TX9D1-1": "VAS MICROFLEX",
+    "AUXYZ-48NH1-1": "LETHAL TOOLS ELO",
+    "DBNYQ-DJ3L1-1": "EAM MICRO DOT",
+    "FSEYG-MUHQ1-1": "VAS LED",
+    "I95Y7-X5WU1-1": "KEPLER-PRO RED DOT",
+    "KPVXY-7GBY1-1": "LTI REFLEX",
+    "N6LXP-GRR31-1": "GREAVES RED DOT",
+    "QMCXF-R3671-1": "K&S SLIM REFLEX",
+    "T43X7-1DKB1-1": "EAM XL REFLEX",
+    "VJTWX-ANZF1-1": "PrismaticTech Digital Holo",
+    "Y1JWN-JZEJ1-1": "EMT3 HOLO MK.2",
+    "21HAW-EUATN-11": "Kepler T-Range Holo",
+    "23Y1W-64L8S-11": "Redwell 30-S 2X",
+    "26ERV-WDWMW-11": "GREAVES ACCUSPOT 3X",
+    "28VHV-MN831-11": "KELPER ULTRA 4X",
+    "2BC8V-DXIH5-11": "PRISMATECH TURBO 4X",
+    "2DSYV-57TW9-11": "RISTRAUCH 7X",
+    "2G9PU-VH5BD-11": "EAM DUAL ZOOM",
+    "2IQFU-LRFQH-11": "GREAVES ULTRA ZOOM",
+    "2L76U-D1R5L-11": "BOWN X-25 IR",
+    "2NMWU-4B2JQ-11": "SOLARIS HOLO-IR",
+    "2R4MT-UKCYU-11": "EAM DYAD XL",
+    "2TKDT-KUNDY-11": "VAS DUO HYBRID SIGHT",
+    "2W24T-C4YT3-11": "VAS STRIX 6X THERMAL",
+    "2YHUT-3EA87-11": "MILLIMETER SCANNER",
+    "31YKS-TNKMB-11": "LTI TARGET FINDER V.2"
+  },
+
+  muzzle: {
+    "2KD5Y-11": "RL-5.56 BRAKE, HAWKER STABILIZER MK.II",
+    "45QAW-11": "REDWELL 5.56 COMPENSATOR, HAWKER SERIES 45",
+    "5Q3FU-11": "TITAN-R 5.56 COMPENSATOR, HAWKER HYBRID .45",
+    "7AFKS-11": "VAS 5.56 SUPPRESSOR, BOWEN .45 SUPPRESSOR",
+    "8USQQ-11": "MONOLITHIC SUPPRESSOR",
+    "AF5VN-11": "REDWELL SHADE-X SUPPRESSOR"
+  },
+
+  barrel: {
+    "H11": "16\" RETICULATED BARREL, 10.5\" SLIM-MOD BARREL",
+    "Q11": "15\" MIRAGE LIGHT BARREL, 9\" BASILISK BARREL",
+    "Y11": "16.5\" FUSION BARREL, 10.5\" GREAVES WHIPTAIL BARREL",
+    "2711": "18\" BOWEN WATCHTOWER BARREL, 12\" VIENNA BARREL",
+    "2F11": "20\" DELTA-F2 BARREL, 11\" RAUNCH 6L-R BARREL",
+    "2N11": ""
+  },
+
+  underbarrel: {
+    "2E9ZS-TS11": "ENHANCE-32 HANDSTOP, RESPIRE HANDSTOP",
+    "3SIZK-MJ11": "EAM STEADY-90 GRIP, FLOWGUARD FOREGRIP",
+    "56SZD-GB11": "QUICKSTEP FOREGRIP, EAM LIGHTPATH FOREGRIP",
+    "6K2Z6-A311": "AXIS SHIFT VERTICAL FOREGRIP, LATERAL PRECISION GRIP",
+    "7YBYY-3U11": "IRONHOLD ANGLED GRIP, VITALIZE HANDSTOP",
+    "9CKYQ-WL11": ""
+  },
+
+  launchers: {
+    "JJH73-B3FB5-11": "M335-X DRILL CHARGE",
+    "TTQA4-G4MG7-11": "M335-X TEMPEST",
+    "243YD-5L5UL-911": "M335-X CLOAK",
+    "2DD7G-6R72R-B11": "M335-X FRAG",
+    "AA942-62863-11": ""
+  },
+
+  magazine: {
+    "4JH11": "BOWEN BLUWARK MAG, FORWARD BREACH MAG",
+    "6BQ11": "MAYDAY EXTENDED MAG, TORCH EXTENDED MAG",
+    "83Y11": "NOMAD RESERVE FAST MAG, BREAKPOINT FAST MAG",
+    "9V711": "BACKLINE FLIP MAGS, FRATERNITY FLIP MAG",
+    "2S911": "",
+    "BMF11": ""
+  },
+
+  reargrip: {
+    "6WVQL-H11": "CONTRABAND GRIP, SKELETONIZED GRIP",
+    "9VBKW-Q11": "HEXCUT GRIP, ERUPTION GRIP",
+    "CTRG7-Y11": "PEREGRINE GRIP, EXCESS GRIP",
+    "FS7BI-711": "CARAVAN-H2 GRIP, BOUNTY GRIP",
+    "IQM6T-F11": "CONTOUR GRIP, LENNOX GRIP",
+    "LP324-N11": "",
+    "PMHWE-W11": "",
+    "SKXRQ-511": "",
+    "VJDM1-D11": "",
+    "YHTHB-L11": ""
+  },
+
+  stock: {
+    "8J11": "WANDER-3V STOCK, VENTRAL STOCK",
+    "CB11": "BOWEN LINCHPIN STOCK, VAS INTERLOCK STOCK",
+    "G311": "TELESCOPIC STOCK, COLLAPSIBLE STOCK",
+    "JU11": "INTERVENTION STOCK, SKE-O2 STOCK",
+    "NL11": "ULTRALIGHT TACTICAL STOCK, MFS FULL STOCK+",
+    "4S11": "",
+    "SD11": "",
+    "W511": ""
+  },
+
+  laser: {
+    "3LYXL-H9Y11": "ADAPTIVE TACTICAL LASER",
+    "68XV7-YIW11": "CONVERGENCE BOX LASER",
+    "8UWST-FSU11": "1mW INSTINCT LASER ARRAY",
+    "BGVQE-X2S11": "3MW MOTION STRIKE LASER",
+    "E3UN1-EBQ11": "5MW LOCKSTEP LASER",
+    "GPTKL-VKN11": "",
+    "JBSI8-CUL11": "",
+    "LXRFT-U4J11": "",
+    "PJQDF-BDH11": ""
+  },
+
+  firemods: {
+    "131": "BOLT CARRIER GROUP",
+    "151": "BUFFER SPRING"
+  },
+
+  ammomod: {
+    "21WSG-FBYJX-2J11": "MFS 5.56 NATO FMJ",
+    "2JD6P-5HFUD-KB11": "5.56 NATO OVERPRESSURED",
+    "32TJW-UMX4U-4311": "",
+    "3K9Y5-JTEEA-LU11": "",
+    "43QCD-9YVNR-5L11": ""
+  },
+
+  special: {
+    "UCS11": "Special 1",
+    "2NPJ1-1": "Special 2"
+  }
+};

@@ -1,0 +1,236 @@
+.blueprint-list {
+  background: transparent;
+  border-radius: 0px;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+}
+
+.blueprint-list h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.blueprint-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.blueprint-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  gap: 0.8rem;
+}
+
+.blueprint-item:hover {
+  background-color: #161b22;
+  border-color: #58a6ff;
+  transform: translateX(2px);
+}
+
+.blueprint-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.blueprint-item h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #58a6ff;
+  font-weight: 600;
+}
+
+.weapon-name {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.blueprint-code {
+  font-size: 0.75rem;
+  color: #79c0ff;
+  font-family: 'Courier New', monospace;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.delete-btn {
+  padding: 0.4rem 0.6rem;
+  background: rgba(248, 81, 73, 0.1);
+  border: 1px solid #30363d;
+  color: #f85149;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+.delete-btn:hover {
+  background: #3d2626;
+  border-color: #f85149;
+}
+
+.empty-state {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+}
+
+.weapon-name {
+  font-size: 0.875rem;
+  color: #8b949e;
+  margin-bottom: 0.25rem;
+}
+
+.blueprint-code {
+  font-size: 0.875rem;
+  color: #79c0ff;
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #f85149;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  color: #ff7b72;
+  transform: scale(1.2);
+}
+
+.empty-state {
+  padding: 1.5rem;
+  text-align: center;
+  color: #6e7681;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .blueprint-list h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .blueprint-item {
+    padding: 0.75rem;
+    gap: 0.5rem;
+    min-height: 44px;
+  }
+
+  .blueprint-item h3 {
+    font-size: 0.9rem;
+  }
+
+  .weapon-name {
+    font-size: 0.8rem;
+  }
+
+  .blueprint-code {
+    font-size: 0.7rem;
+  }
+
+  .delete-btn {
+    padding: 0.35rem 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blueprint-list h2 {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .blueprint-item {
+    padding: 0.6rem;
+    flex-wrap: wrap;
+    min-height: 40px;
+  }
+
+  .blueprint-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .blueprint-item h3 {
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .weapon-name {
+    font-size: 0.75rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .blueprint-code {
+    font-size: 0.65rem;
+    word-break: break-all;
+  }
+
+  .delete-btn {
+    padding: 0.3rem 0.4rem;
+    font-size: 0.9rem;
+    align-self: center;
+  }
+
+  .empty-state {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .blueprint-list h2 {
+    font-size: 0.9rem;
+  }
+
+  .blueprint-item {
+    padding: 0.5rem;
+  }
+
+  .blueprint-item h3 {
+    font-size: 0.8rem;
+  }
+
+  .weapon-name {
+    font-size: 0.7rem;
+  }
+
+  .blueprint-code {
+    font-size: 0.6rem;
+  }
+
+  .delete-btn {
+    padding: 0.25rem 0.3rem;
+    font-size: 0.85rem;
+  }
+}

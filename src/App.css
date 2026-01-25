@@ -1,0 +1,972 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0d1117;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.app-header {
+  background: #161b22;
+  backdrop-filter: blur(10px);
+  padding: 2rem 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid rgba(31, 111, 235, 0.3);
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  letter-spacing: 0px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+.app-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  color: rgba(31, 111, 235, 0.9);
+  border-bottom-color: rgba(31, 111, 235, 0.5);
+}
+
+.nav-link.active {
+  color: #1f6feb;
+  border-bottom-color: #1f6feb;
+}
+
+.app-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.builder-section-container {
+  background: #161b22;
+  backdrop-filter: blur(10px);
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.builder-section-container:hover {
+  border-color: rgba(31, 111, 235, 0.5);
+  box-shadow: 0 12px 48px rgba(31, 111, 235, 0.15);
+}
+
+.list-section-container {
+  background: #161b22;
+  backdrop-filter: blur(10px);
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .app-main {
+    grid-template-columns: 1fr;
+  }
+
+  .list-section-container {
+    position: static;
+    height: auto;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    padding: 1.5rem;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    gap: 0.5rem;
+  }
+
+  .header-logo {
+    height: 32px;
+    width: 32px;
+  }
+
+  .app-nav {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .app-main {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .blueprint-builder,
+  .blueprint-list {
+    padding: 1.25rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .load-form input {
+    font-size: 16px;
+  }
+
+  .attachments-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    min-height: 100vh;
+  }
+
+  .app-header {
+    padding: 0.75rem;
+    border-bottom: 1px solid rgba(31, 111, 235, 0.2);
+  }
+
+  .app-header h1 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .header-logo {
+    height: 28px;
+    width: 28px;
+  }
+
+  .app-nav {
+    gap: 0;
+    margin-top: 0.4rem;
+    justify-content: flex-start;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    flex: 1;
+    text-align: center;
+    min-width: auto;
+  }
+
+  .app-main {
+    padding: 0.5rem;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blueprint-builder,
+  .blueprint-list {
+    padding: 0.75rem;
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  .builder-section h2,
+  .blueprint-list h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .builder-section h3,
+  .load-blueprint-section h3 {
+    font-size: 0.95rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.8rem;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .load-form input {
+    padding: 0.6rem;
+    font-size: 16px;
+    border-radius: 3px;
+  }
+
+  .load-form {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .load-form input {
+    width: 100%;
+  }
+
+  .load-btn {
+    width: 100%;
+  }
+
+  .attachments-grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    padding: 0.6rem;
+  }
+
+  .code-display {
+    padding: 0.75rem;
+    margin: 1rem 0;
+  }
+
+  .code-box {
+    padding: 0.6rem;
+    min-height: 40px;
+    font-size: 0.8rem;
+  }
+
+  .code-box code {
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+  }
+
+  .copy-btn,
+  .load-btn,
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.85rem;
+    min-height: 40px;
+    border-radius: 3px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .load-hint {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .load-error {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    margin-top: 0.4rem;
+  }
+
+  .load-blueprint-section {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .divider {
+    margin: 1rem 0;
+  }
+
+  .blueprint-item {
+    padding: 0.6rem;
+    flex-direction: column;
+    gap: 0.4rem;
+    min-height: 40px;
+  }
+
+  .blueprint-item h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .weapon-name {
+    font-size: 0.75rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .blueprint-code {
+    font-size: 0.7rem;
+    word-break: break-all;
+  }
+
+  .delete-btn {
+    align-self: flex-end;
+    padding: 0.4rem;
+    font-size: 1rem;
+  }
+
+  .empty-state {
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .app-header h1 {
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
+
+  .header-logo {
+    height: 24px;
+    width: 24px;
+  }
+
+  .app-header h1 {
+    gap: 0.2rem;
+  }
+
+  .nav-link {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .blueprint-builder,
+  .blueprint-list {
+    padding: 0.6rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .load-form input {
+    padding: 0.5rem;
+    font-size: 16px;
+  }
+
+  .copy-btn,
+  .load-btn,
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.55rem 0.75rem;
+    font-size: 0.8rem;
+    min-height: 38px;
+  }
+
+  .builder-section h2,
+  .blueprint-list h2 {
+    font-size: 1rem;
+  }
+
+  .attachments-grid {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .code-display {
+    padding: 0.6rem;
+  }
+
+  .code-box {
+    padding: 0.5rem;
+    min-height: 35px;
+    font-size: 0.75rem;
+  }
+
+  .blueprint-item {
+    padding: 0.5rem;
+    gap: 0.3rem;
+  }
+
+  .blueprint-item h3 {
+    font-size: 0.85rem;
+  }
+
+  .blueprint-code {
+    font-size: 0.65rem;
+  }
+
+  .load-form {
+    gap: 0.3rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.6rem;
+  }
+
+  .form-group label {
+    font-size: 0.8rem;
+  }
+}
+
+.top5-minimize-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #1f6feb;
+  border: none;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top5-minimize-btn:hover {
+  background-color: #388bfd;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(31, 111, 235, 0.4);
+}
+
+.top5-minimize-btn:active {
+  transform: scale(0.95);
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.sidebar {
+  flex: 0 0 320px;
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Blueprint Builder Styles */
+.blueprint-builder {
+  background-color: #161b22;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.builder-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #58a6ff;
+}
+
+.builder-section h3 {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #79c0ff;
+}
+
+.load-blueprint-section {
+  background-color: #0d1117;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  margin-bottom: 2rem;
+}
+
+.load-blueprint-section h3 {
+  margin-top: 0;
+}
+
+.load-hint {
+  font-size: 0.9rem;
+  color: #6e7681;
+  margin-bottom: 1rem;
+}
+
+.load-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.load-form input {
+  flex: 1;
+  padding: 0.75rem;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  font-family: 'Courier New', monospace;
+}
+
+.load-form input:focus {
+  outline: none;
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+}
+
+.load-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #1f6feb;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.load-btn:hover {
+  background-color: #388bfd;
+  box-shadow: 0 2px 6px rgba(31, 111, 235, 0.4);
+}
+
+.load-error {
+  color: #f85149;
+  font-size: 0.9rem;
+  padding: 0.75rem;
+  background-color: rgba(248, 81, 73, 0.1);
+  border: 1px solid rgba(248, 81, 73, 0.3);
+  border-radius: 4px;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #30363d, transparent);
+  margin: 1.5rem 0;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #c9d1d9;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+}
+
+.attachments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #0d1117;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+}
+
+.attachments-grid h3 {
+  grid-column: 1 / -1;
+  margin: 0 0 0.5rem 0;
+}
+
+/* Code Display Styles */
+.code-display {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #0d1117;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+}
+
+.code-box {
+  background-color: #010409;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: 'Courier New', monospace;
+  word-break: break-all;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.code-box code {
+  color: #79c0ff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.code-box .placeholder {
+  color: #6e7681;
+  font-style: italic;
+}
+
+/* Button Styles */
+.copy-btn,
+.btn-primary,
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 0.5rem;
+}
+
+.copy-btn {
+  background-color: #238636;
+  color: white;
+  width: 100%;
+}
+
+.copy-btn:hover {
+  background-color: #2ea043;
+  box-shadow: 0 2px 6px rgba(35, 134, 54, 0.4);
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  background-color: #1f6feb;
+  color: white;
+  flex: 1;
+}
+
+.btn-primary:hover {
+  background-color: #388bfd;
+  box-shadow: 0 2px 6px rgba(31, 111, 235, 0.4);
+}
+
+.btn-secondary {
+  background-color: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  flex: 1;
+}
+
+.btn-secondary:hover {
+  background-color: #30363d;
+  border-color: #58a6ff;
+}
+
+/* Blueprint List Styles */
+.blueprint-list {
+  background-color: #161b22;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.blueprint-list h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #58a6ff;
+}
+
+.blueprint-list ul {
+  list-style: none;
+}
+
+.blueprint-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.blueprint-item:hover {
+  background-color: #161b22;
+  border-color: #58a6ff;
+}
+
+.blueprint-item.active {
+  background-color: #0d2d52;
+  border-color: #58a6ff;
+}
+
+.blueprint-info {
+  flex: 1;
+}
+
+.blueprint-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: #79c0ff;
+}
+
+.weapon-name {
+  font-size: 0.875rem;
+  color: #8b949e;
+  margin-bottom: 0.25rem;
+}
+
+.blueprint-code {
+  font-size: 0.875rem;
+  color: #79c0ff;
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #f85149;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  color: #ff7b72;
+  transform: scale(1.2);
+}
+
+.empty-state {
+  padding: 1.5rem;
+  text-align: center;
+  color: #6e7681;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .sidebar {
+    flex: none;
+    max-height: auto;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .header-content {
+    width: 100%;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .top5-btn {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .attachments-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .header {
+    padding: 1.5rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .blueprint-builder,
+  .blueprint-list {
+    padding: 1.5rem;
+  }
+
+  .attachments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #58a6ff;
+}
+.announcement-panel {
+  position: fixed;
+  top: 90px;
+  right: 30px;
+  width: 280px;
+  background: rgba(255, 60, 60, 0.12);
+  border: 1px solid rgba(255, 60, 60, 0.35);
+  border-radius: 12px;
+  padding: 20px;
+  z-index: 9999;
+  color: #ff6b6b;
+  box-shadow: 0 8px 24px rgba(255, 60, 60, 0.2);
+  backdrop-filter: blur(6px);
+  animation: fadeIn 0.25s ease;
+}
+
+.announcement-panel h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1em;
+  color: #ff6b6b;
+}
+
+.announcement-panel p {
+  font-size: 0.95em;
+  color: #ff9a9a;
+  line-height: 1.4;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .announcement-panel {
+    display: none;
+  }
+}
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header-announcement {
+  background: rgba(255, 60, 60, 0.12);
+  border: 1px solid rgba(255, 60, 60, 0.35);
+  border-radius: 12px;
+  padding: 15px 18px;
+  color: #ff6b6b;
+  max-width: 280px;
+}

@@ -1,0 +1,286 @@
+/* DASHBOARD */
+
+.camo-dashboard {
+  padding: 2rem;
+  color: #fff;
+}
+
+.camo-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.camo-dashboard-header h2 {
+  font-size: 2rem;
+  color: #58a6ff;
+}
+
+.mode-select-input {
+  padding: 0.6rem 1rem;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* DROPDOWNS */
+
+.weapon-dropdowns {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.weapon-dropdown {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.weapon-dropdown summary {
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #e6edf3;
+  outline: none;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weapon-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.class-progress {
+  font-size: 0.85rem;
+  color: #8b949e;
+}
+
+.weapon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.weapon-btn {
+  padding: 0.5rem 1rem;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 0.9rem;
+}
+
+.weapon-btn:hover {
+  background: #161b22;
+  border-color: #58a6ff;
+}
+
+.weapon-btn.weapon-complete {
+  border-color: #2ea043;
+  box-shadow: 0 0 6px rgba(46, 160, 67, 0.6);
+}
+
+/* MODAL */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.modal-content {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  animation: modalPop 0.25s ease-out;
+}
+
+@keyframes modalPop {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.modal-header h3 {
+  font-size: 1.6rem;
+  color: #58a6ff;
+  margin: 0;
+}
+
+.modal-header p {
+  font-size: 1rem;
+  color: #8b949e;
+  margin: 0.2rem 0 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #c9d1d9;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  color: #ff7b72;
+}
+
+/* WEAPON PROGRESS */
+
+.weapon-progress {
+  margin-bottom: 1.5rem;
+}
+
+.weapon-progress span {
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+.weapon-progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #0d1117;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #30363d;
+  margin-top: 0.4rem;
+}
+
+.weapon-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1f6feb, #58a6ff);
+  transition: width 0.25s ease-out;
+}
+
+/* CAMO SECTIONS */
+
+.weapon-camo-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.camo-section-title {
+  font-size: 1rem;
+  color: #8b949e;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.camo-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* CAMO CHIPS + TOOLTIP */
+
+.camo-chip {
+  position: relative;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #30363d;
+  background: #0d1117;
+  color: #c9d1d9;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.camo-chip:hover {
+  border-color: #58a6ff;
+  background: #111827;
+}
+
+.camo-chip.complete {
+  background: #1f6feb;
+  border-color: #58a6ff;
+  color: #fff;
+  box-shadow: 0 0 8px rgba(31, 111, 235, 0.6);
+}
+
+.camo-chip-name {
+  white-space: nowrap;
+}
+
+/* Tooltip using data-challenge */
+
+.camo-chip::after {
+  content: attr(data-challenge);
+  position: absolute;
+  left: 50%;
+  bottom: 130%;
+  transform: translateX(-50%);
+  background: #0d1117;
+  color: #c9d1d9;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 10;
+}
+
+.camo-chip:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-2px);
+}
+
+/* SCROLLBAR */
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #58a6ff;
+}
