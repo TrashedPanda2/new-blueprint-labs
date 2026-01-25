@@ -1,16 +1,104 @@
-# React + Vite
+Absolutely — and since you just finished **Blueprint Labs**, I’ll craft a README that feels clean, professional, and perfectly aligned with the tactical, polished vibe you’ve been building.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+If you want it more humorous, more corporate, or more “TrashedPanda‑coded,” I can tune it after.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# **README.md (ready to paste)**
 
-## React Compiler
+## **Blueprint Labs — Modern Warfare Blueprint Generator & Camo Tracker**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Blueprint Labs is a fast, clean, and tactical web utility designed for Call of Duty players who want instant access to blueprint pools, weapon data, camo tracking, and a fully randomized build generator. Built for speed, clarity, and zero‑friction usability, the site mirrors in‑game logic while delivering a premium UI experience.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## **🚀 Features**
+
+### **Blueprint Generator**
+- Generates randomized weapon builds using real blueprint pools  
+- Pulls from curated, accurate weapon + attachment data  
+- Includes blueprint images, rarity indicators, and weapon categories  
+
+### **Camo Tracker**
+- Track your mastery progress across weapons  
+- Saves locally using `localStorage`  
+- Clean UI for fast updates and visual clarity  
+
+### **Blueprint Pooling**
+- Connect pools to blueprints with the pooling list
+- Available for Black ops 6 and 7
+- 
+### **Showcase Blueprints**
+- Full list of curated blueprints with:
+  - Names  
+  - Weapon type  
+  - Category  
+  - Image previews  
+  - Attachment sets  
+  - Blueprint codes  
+
+### **Modern, Responsive UI**
+- Built for desktop + mobile  
+- Smooth animations, polished layout, and tactical branding  
+
+---
+
+## **🛠️ Tech Stack**
+
+- **React + Vite**  
+- **TailwindCSS** (if applicable)  
+- **LocalStorage** for persistent user data  
+- **Modular data structures** for weapon pools and blueprint logic  
+- **Deployed on Vercel**
+
+---
+
+## **📦 Installation**
+
+Clone the repo:
+
+```
+git clone https://github.com/TrashedPanda2/new-blueprint-labs
+cd new-blueprint-labs
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Run locally:
+
+```
+npm run dev
+```
+
+Build for production:
+
+```
+npm run build
+```
+
+---
+
+## **🌐 Live Deployment**
+
+The site is deployed on **Vercel**.  
+=https://blueprint-labs.vercel.app/
+
+
+
+## **🤝 Credits**
+
+- **TrashedPanda** — Creator, designer, and architect  
+- **Liamesso** — Blueprint Generator logic  
+- **Parsegod** — Blueprint Pool List  
+- Community feedback + testing  
+
+---
+
+## **📜 License**
+
+This project is for personal and community use.  
+Not affiliated with Activision, Infinity Ward, Treyarch, or Sledgehammer Games.
