@@ -78,7 +78,7 @@ npm run build
 ## **🌐 Live Deployment**
 
 The site is deployed on **Vercel**.  
-=https://blueprint-labs.vercel.app/
+https://blueprint-labs.vercel.app/
 
 
 
