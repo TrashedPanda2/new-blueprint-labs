@@ -87,7 +87,7 @@ function AppContent() {
 
   <div className="header-announcement">
     <h3>Announcements</h3>
-    <p>Black ops 7 Pools & more import codes being added SOON!</p>
+    <p>+8 Black ops 7 Blueprints added, more being found now!</p>
   </div>
 </header>
 
