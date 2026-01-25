@@ -3,7 +3,7 @@
 
 Blueprint Labs is a fast, clean, and tactical web utility designed for Call of Duty players who want instant access to blueprint pools, weapon data, camo tracking, and a fully randomized build generator. Built for speed, clarity, and zero‑friction usability, the site mirrors in‑game logic while delivering a premium UI experience.
 
----
+--- 
 
 ## **🚀 Features**
 
