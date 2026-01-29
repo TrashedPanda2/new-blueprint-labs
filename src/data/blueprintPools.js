@@ -20,8 +20,8 @@ const weaponCategoryMap = {
   "M15 MOD 0": "Assault Rifles",
   "AK-27": "Assault Rifles",
   "MXR-17": "Assault Rifles",
-  "X9 Maverick": "Assault Rifles",
-  "DS20 Mirage": "Assault Rifles",
+  "X9 MAVERICK": "Assault Rifles",
+  "DS20 MIRAGE": "Assault Rifles",
   "Peacekeeper MK1": "Assault Rifles",
   "FFAR 1": "Assault Rifles",
 
@@ -38,7 +38,7 @@ const weaponCategoryMap = {
   "Dresden 9mm": "Submachine Guns",
   "Sturmwolf 45": "Submachine Guns",
   "RK-9": "Submachine Guns",
-  "Ryden 45K": "Submachine Guns",
+  "Ryden 45k": "Submachine Guns",
   "Razor 9mm": "Submachine Guns",
   "Dravec 45": "Submachine Guns",
   "Carbon 57": "Submachine Guns",
@@ -64,7 +64,7 @@ const weaponCategoryMap = {
   "ESSEX MODEL 07": "Marksman Rifles",
   "TR2": "Marksman Rifles",
   "M8A1": "Marksman Rifles",
-  "Warden 308": "Marksman Rifles",
+  "WARDEN 308": "Marksman Rifles",
   "M34 Novaline": "Marksman Rifles",
 
   // Sniper Rifles
@@ -82,8 +82,8 @@ const weaponCategoryMap = {
   "MARINE SP": "Shotguns",
   "MAELSTROM": "Shotguns",
   "Akita": "Shotguns",
-  "Echo 12": "Shotguns",
-  "M10 Breacher": "Shotguns",
+  "ECHO 12": "Shotguns",
+  "M10 BREACHER": "Shotguns",
   "ASG-89": "Shotguns",
 
   // Pistols
@@ -92,19 +92,19 @@ const weaponCategoryMap = {
   "SIRIN 9MM": "Pistols",
   "Coda 9": "Pistols",
   "Velox 5.7": "Pistols",
-  "Jäger 45": "Pistols",
+  "Jager 45": "Pistols",
   "STRYDER .22": "Pistols",
   "GRAVEMARK .357": "Pistols",
 
    //Launchers
   "CIGMA 2B": "Launchers",
   "HE-1": "Launchers",
-  "ARROW 109": "Launchers",
+  "AAROW 109": "Launchers",
   "A.R.C M1": "Launchers"
   ,
 
   // Specials
-  "NX Ravager": "Specials",
+  "NX RAVAGER": "Specials",
   "NAIL GUN": "Specials",
   "Olympia": "Specials",
   "D1.3 SECTOR": "Specials",
@@ -112,7 +112,7 @@ const weaponCategoryMap = {
   "SIRIN 9MM": "Specials",
   // CATEGORY 9 — MELEE
   "Knife": "Melee",
-  "Knife (BO6)": "Melee",
+  "Knife (BO7)": "Melee",
   "Flatline MK.II": "Melee",
   "Ballistic Knife": "Melee",
   "Baseball Bat": "Melee",
