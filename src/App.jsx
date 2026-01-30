@@ -20,12 +20,12 @@ function AppContent() {
   useEffect(() => {
     if (location.pathname === '/gallery') {
       document.title = 'Blueprint Labs - Showcase';
-    } else if (location.pathname === '/pools') {
-      document.title = 'Blueprint Labs - Pools';
+    } else if (location.pathname === '/generator') {
+      document.title = 'Blueprint Labs - Generator';
     } else if (location.pathname === '/camos') {
       document.title = 'Blueprint Labs - Camo Tracker';
     } else {
-      document.title = 'Blueprint Labs - Blueprint Generator';
+      document.title = 'Blueprint Labs - Pools';
     }
   }, [location.pathname]);
 
@@ -78,8 +78,8 @@ function AppContent() {
     </h1>
 
     <nav className="app-nav">
-      <a href="/pools" className="nav-link">Pools</a>
-      <a href="/" className="nav-link">Generator</a>
+      <a href="/" className="nav-link">Pools</a>
+      <a href="/generator" className="nav-link">Generator</a>
       <a href="/gallery" className="nav-link">Showcase</a>
       <a href="/camos" className="nav-link">Camo Tracker</a>
     </nav>
@@ -95,29 +95,31 @@ function AppContent() {
       {/* PAGE CONTENT */}
       <main className="app-main">
         <Routes>
-          <Route
-            path="/"
-            element={
-              <div className="builder-layout">
-                <div className="builder-section-container">
-                  <BlueprintBuilder
-                    blueprint={editingBlueprint}
-                    onAdd={addBlueprint}
-                    onUpdate={updateBlueprint}
-                    onClear={() => setEditingBlueprint(null)}
-                  />
-                </div>
+          <Route path="/" element={<BlueprintPools />} />
+    <Route
+  path="/generator"
+  element={
+    <div className="builder-layout">
+      <div className="builder-section-container">
+        <BlueprintBuilder
+          blueprint={editingBlueprint}
+          onAdd={addBlueprint}
+          onUpdate={updateBlueprint}
+          onClear={() => setEditingBlueprint(null)}
+        />
+      </div>
 
-                <div className="list-section-container">
-                  <BlueprintList
-                    blueprints={blueprints}
-                    onEdit={setEditingBlueprint}
-                    onDelete={deleteBlueprint}
-                  />
-                </div>
-              </div>
-            }
-          />
+      <div className="list-section-container">
+        <BlueprintList
+          blueprints={blueprints}
+          onEdit={setEditingBlueprint}
+          onDelete={deleteBlueprint}
+        />
+      </div>
+    </div>
+  }
+/>
+
 
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/pools" element={<BlueprintPools />} />
