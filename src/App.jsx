@@ -8,7 +8,7 @@ import BlueprintPools from './components/BlueprintPools';
 import CamoTracker from './components/CamoTracker';
 import Credits from './components/Credits';
 import DiscordSupportModal from './components/DiscordSupportModal';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 import './App.css';
 
 function AppContent() {
