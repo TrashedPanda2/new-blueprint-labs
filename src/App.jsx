@@ -138,6 +138,7 @@ function App() {
     <Router>
       <Credits />
       <AppContent />
+      <Analytics />
     </Router>
   );
 }
