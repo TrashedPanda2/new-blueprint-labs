@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 
 import BlueprintBuilder from './components/BlueprintBuilder';
 import BlueprintList from './components/BlueprintList';
@@ -129,6 +130,7 @@ function AppContent() {
 
       {/* GLOBAL FLOATING DISCORD PANEL */}
       <DiscordSupportModal />
+      <Analytics />
     </>
   );
 }
