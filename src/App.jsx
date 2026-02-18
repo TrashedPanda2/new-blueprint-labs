@@ -9,7 +9,6 @@ import CamoTracker from './components/CamoTracker';
 import Credits from './components/Credits';
 import DiscordSupportModal from './components/DiscordSupportModal';
 import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import './App.css';
 
 function AppContent() {
